@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clipboard.js</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Clipboard.js API -->
+    <script src="js/clipboard/clipboard.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.15/clipboard.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Copy to clipboard using CLIPBOARD.JS</h1>
+
+        <div class="col-md-6">
+            <form>
+                <textarea class="form-control" rows="3" placeholder="Teste aqui!"></textarea>
+                <input type="reset" class="btn btn-default" value="Reset">
+                <br>
+                <br>
+                <button class="btn btn-primary" data-clipboard-text="Item 1">Item 1</button>
+                <button class="btn btn-danger" data-clipboard-text="Item 2">Item 2</button>
+                <button class="btn btn-success" data-clipboard-text="Item 3">Item 3</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var clipboard = new Clipboard('.btn');
+        clipboard.on('success', function (e) {
+            console.log(e);
+        });
+        clipboard.on('error', function (e) {
+            console.log(e);
+        });
+    </script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+
+</html>

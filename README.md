@@ -1,2 +1,2 @@
 # clipboard-sweetalert
-Aplicação que utiliza as apis Clipboard.js e Sweetalert2
+Aplicações que utilizam as APIs __[Clipboard.js](https://clipboardjs.com/)__ e __[Sweetalert2](https://limonte.github.io/sweetalert2/)__
